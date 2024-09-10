@@ -14,5 +14,8 @@ export const routes: Routes = [
             }
         },
         component: ListComponent
+    },
+    {
+        path: "/editar",
     }
 ];
