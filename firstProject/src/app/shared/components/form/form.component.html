@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-content-container">
+        <mat-form-field>
+            <mat-label>Input</mat-label>
+            <input type="text" matInput formControlName="name" placeholder="Título">
+            <input type="text" matInput formControlName="desc" placeholder="Descrição">
+            <input type="number" matInput formControlName="price" placeholder="Preço">
+            <input type="number" matInput formControlName="qtdd" placeholder="Quantidade">
+            <input type="number" matInput formControlName="tipo" placeholder="Imagem">
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="accent">Salvar</button>
+    </div>
+</form>

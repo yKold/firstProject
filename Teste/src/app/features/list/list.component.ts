@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
-import { Product } from '../../shared/interfaces/product';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CardComponent } from './card/card.component';
+import { Product } from '../../shared/interfaces/product';
 
 @Component({
   selector: 'app-list',
