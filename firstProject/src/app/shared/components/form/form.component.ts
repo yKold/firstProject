@@ -25,15 +25,17 @@ export class FormComponent {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl<string>(this.product?.Name ?? "", 
+      name: new FormControl<string>(this.product?.name ?? "", 
         { nonNullable: true, validators: Validators.required}),
-      tipo: new FormControl<tipo | null>(this.product?.Tipo ?? null, 
+      tipo: new FormControl<tipo | null>(this.product?.tipo ?? null, 
         { nonNullable: true, validators: Validators.required }),
-      desc: new FormControl<string>(this.product?.Descricao ?? "", 
+      image: new FormControl<string>(this.product?.imagem || "", 
         { nonNullable: true, validators: Validators.required }),
-      qtdd: new FormControl<number>(this.product?.Quantidade ?? 0, 
+      desc: new FormControl<string>(this.product?.descricao ?? "", 
         { nonNullable: true, validators: Validators.required }),
-      price: new FormControl<number>(this.product?.Preco ?? 0, 
+      qtdd: new FormControl<number>(this.product?.quantidade ?? 0, 
+        { nonNullable: true, validators: Validators.required }),
+      price: new FormControl<number>(this.product?.preco ?? 0, 
         { nonNullable: true, validators: Validators.required })
     });
   }

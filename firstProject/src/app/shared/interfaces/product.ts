@@ -32,11 +32,12 @@ export enum tipo {
     Salgadinho = 31
 }
 export interface Product {
-    Id: number;
-    Name: string;
-    Descricao: string;
-    Preco: number;
-    Quantidade: number;
-    Tipo: tipo;
+    id: number;
+    name: string;
+    imagem: string;
+    descricao: string;
+    preco: number;
+    quantidade: number;
+    tipo: tipo;
 }
 

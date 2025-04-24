@@ -1,21 +1,21 @@
 <mat-card class="card" appearance="outlined">
     <mat-card-header>
         <mat-card-title class="titulo">
-            {{productName()}}
+            {{product.name}}
         </mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <div>
-            {{productTipo()}}
+            <img [src]="product.imagem" alt="{{product.imagem}}">
         </div>
         <div>
-            {{productDesc()}}
+            {{product.descricao}}
         </div>
         <div>
-            <p class="bold">Quantidade: </p>  {{productQtd()}}
+            <p class="bold">Quantidade: </p>  {{product.quantidade}} 
         </div>
         <div>
-            <p class="bold">Preço: </p> {{productPreco()}}
+            <p class="bold">Preço: </p>R${{product.preco}}
         </div>
     </mat-card-content>
     <mat-card-actions>

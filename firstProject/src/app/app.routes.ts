@@ -7,7 +7,7 @@ export const routes: Routes = [
     {
         path: "",
         resolve: {
-            Products: () => {
+            produtos: () => {
                 const productsService = inject(ProductsService)
 
                 return productsService.getAll();

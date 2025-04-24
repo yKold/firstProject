@@ -11,16 +11,16 @@ import { CardComponent } from './card/card.component';
   styleUrl: './list.component.scss'
 })
 export class ListComponent {
-  products = signal<Product[]>(inject(ActivatedRoute).snapshot.data["produtos"]);
+  produtos = signal<Product[]>(inject(ActivatedRoute).snapshot.data["produtos"]);
   
   router = inject(Router);
 
   constructor() {
-    console.log(this.products()); // Log to check if the products are correctly set
+    console.log(this.produtos()); // Log to check if the products are correctly set
   }
 
 
   onEdit(product:Product) {
-    this.router.navigate(["/editar", product.Id]);
+    this.router.navigate(["/editar", product.id]);
   }
 }

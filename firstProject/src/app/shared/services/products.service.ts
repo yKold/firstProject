@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
 import { PayloadProduct } from '../interfaces/payload-product';
 
@@ -7,17 +7,14 @@ import { PayloadProduct } from '../interfaces/payload-product';
   providedIn: 'root'
 })
 export class ProductsService {
-  
-  HttpClient = inject(HttpClient)
-  minhaApi = "http://localhost:5283/api/produtos";
+  constructor(private httpClient: HttpClient) {}
 
   getAll(){
-    console.log(this.minhaApi)
-    return this.HttpClient.get<Product[]>(this.minhaApi);
+    return this.httpClient.get<Product[]>('/api/produtos');
   }
 
   get(id:string){
-    return this.HttpClient.get<Product>(`/api/Produtos/${id}`);
+    return this.httpClient.get<Product>(`/api/Produtos/${id}`);
   }
 
   // post(){
@@ -25,11 +22,10 @@ export class ProductsService {
   // }
 
   put(id:string, payload: PayloadProduct){
-    return this.HttpClient.put(`/api/Products/${id}`, payload)
+    return this.httpClient.put(`/api/Products/${id}`, payload)
   }
 
   // delete(id:string){
 
   // }
-  constructor() { }
 }

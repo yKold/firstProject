@@ -18,7 +18,7 @@ export class EditComponent {
 
   onSubmit(product: Product) {
     this.productService.put(
-      this.product.Id.toString(), product
+      this.product.id.toString(), product
     )
     this.router.navigateByUrl('/')
   }

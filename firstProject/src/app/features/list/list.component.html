@@ -1,8 +1,10 @@
 <div class="outContainer">
     <div class="container">
-        @for ( product of products(); track product.Id){
-            <app-card class="card" [product]="product" (edit)="onEdit(product)"
+        @for ( valores of produtos(); track valores.id){
+            <app-card class="card" [product]="valores" (edit)="onEdit(valores)"
             ></app-card>
+            
         }
+        
     </div>
 </div>
